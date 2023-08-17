@@ -1,12 +1,8 @@
 const fibsRec = (n) => {
-  if (n <= 0) return [];
-  const array = fibsRec(n - 1);
-  if (n === 1 || n === 2) {
-    array.push(n - 1);
-  } else {
-    array.push(array[n - 3] + array[n - 2]);
-  }
-  return array;
+  if (n === 0) return [];
+  if (n === 1) return [0];
+  if (n === 2) return [0, 1];
+  return [...fibsRec(n - 1), fibsRec(n - 1)[n - 2] + fibsRec(n - 1)[n - 3]];
 };
 
 const execute = () => {
@@ -22,3 +18,5 @@ const execute = () => {
 };
 
 execute();
+
+// (3) [0, 1, 1]
