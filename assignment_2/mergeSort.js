@@ -1,5 +1,3 @@
-const unsortedArray = [1, 4, 2, 8, 7, 6, 5, 3];
-
 const mergeSort = (array) => {
   if (array.length === 0) return [];
   if (array.length === 1) return array;
@@ -17,4 +15,4 @@ const mergeSort = (array) => {
   return sortedArray;
 };
 
-console.log(mergeSort(unsortedArray));
+export default mergeSort;
